@@ -4,9 +4,7 @@ const output = document.querySelector('.output');
 
 let serverURL = 'https://api.funtranslations.com/translate/minion.json'
 
-function getTranslatedURL(text){
-   return serverURL + '?' + 'text=' + text;
-}
+const getTranslatedURL = text => serverURL + '?' + 'text=' + text;
 
 
 
@@ -14,7 +12,8 @@ function getTranslatedURL(text){
 
 
 
-btn.addEventListener('click',function clickHandler(){
+
+btn.addEventListener('click',() => {
     var inputValue = input.value;
     
         fetch(getTranslatedURL(inputValue))
